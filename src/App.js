@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { memo, Suspense } from 'react';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+import { renderRoutes } from 'react-router-config';
 
-function App() {
+import store from './store';
+import route from './router';
+
+export default memo(function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <Suspense fallback={<div>loding...</div>}>
+      <Provider store={store}>
+        <BrowserRouter>
+          {renderRoutes(route)}
+        </BrowserRouter>
+      </Provider>
+    </Suspense>
+  )
+})
 
-export default App;

@@ -1,0 +1,3 @@
+export const GET_GOODS_LIST = 'GET_GOODS_LIST';
+export const GET_GOODS_COUNT = 'GET_GOODS_COUNT';
+export const CHANGE_QUERY_INFO = 'CHANGE_QUERY_INFO';

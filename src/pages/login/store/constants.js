@@ -1,0 +1,2 @@
+
+export const VALIDATE_USER_INFO = 'VALIDATE_USER_INFO';

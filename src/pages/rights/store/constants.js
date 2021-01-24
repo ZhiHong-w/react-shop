@@ -1,0 +1,1 @@
+export const GET_RIGHTS_LIST = 'GET_RIGHTS_LIST';
